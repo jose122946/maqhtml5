@@ -41,7 +41,7 @@ ol.bjqs-markers{list-style: none; padding: 0; margin: 0; width:100%;}
 ol.bjqs-markers.h-centered{text-align: center;}
 ol.bjqs-markers li{display:inline;}
 ol.bjqs-markers li a{display:inline-block;}
-p.bjqs-caption{display:block;width:96%;margin:0;padding:2%;position:absolute;bottom:0;}
+p.bjqs-caption{font-weight:bold;display:block;width:96%;margin:0;padding:2%;position:absolute;bottom:0;}
  
  
 .bjqs-caption{
@@ -91,7 +91,8 @@ nav
 {
 height: 40px;
 width: 100%;
-background: rgba(128,0,128,.6);
+
+background: rgba(183,91,0,.6);
 }
 nav ul
 {
@@ -115,7 +116,7 @@ padding-top: 5px;
 }
 nav ul li:hover
 {
-   background: #D341D8;
+   background: #FF9A35;
 -webkit-transition:all 1s;
 -mozilla-transition:all 1s;
 -o-transition:all 1s;

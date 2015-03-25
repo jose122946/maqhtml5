@@ -1,6 +1,5 @@
 *
 {
-  
   margin: 0;
   padding: 0;
 }
@@ -212,6 +211,10 @@ box-shadow:         3px 3px 14px 0px rgba(50, 50, 50, 1);
   height: 100%;
   float: left;
 }
+#map-canvas
+{
+-webkit-filter:grayscale(0);
+}
 #logo
 {
   height: 130%;
@@ -245,6 +248,36 @@ footer
   color: white;
   bottom: 0px;
 }
+#valores
+{
+  #0D3F93
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 80%;
+  background: rgba(255,255,200,.5);
+}
+p
+{
+  margin-top: 25px;
+
+}
+.mision
+{
+  margin: 0 auto;
+  padding-bottom: 40px;
+  margin-top: 50px;
+  width: 80%;
+  border-bottom: 2px black dotted;
+
+}
+.titulo
+{
+  margin-bottom: 40px;
+  width: 20%;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 800px){
 
 body

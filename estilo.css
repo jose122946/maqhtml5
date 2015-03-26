@@ -164,7 +164,7 @@ height: 100%;
   width: 17%;
   height: 120px;
 }
-img
+.img4
 {
   
 width: 100%;
@@ -186,7 +186,7 @@ h1
   color: #FF8000;
   font-family: 'Lobster', cursive;
 }
-img:hover
+.img4:hover
 {
  -webkit-filter:grayscale(0);
  -mozilla-filter:grayscale(0);
@@ -251,7 +251,7 @@ footer
 }
 #valores
 {
-  #0D3F93
+
   height: 500px;
   margin: 0 auto;
   margin-top: 200px;

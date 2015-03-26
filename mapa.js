@@ -1,70 +1,107 @@
+/*var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
 var map;
 
 function initialize() {
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  var merida = new google.maps.LatLng(20.9807788,-89.6217701);
   var mapOptions = {
-    zoom: 15
-  };
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
-
-  // Try HTML5 geolocation
-  if(navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = new google.maps.LatLng(position.coords.latitude,
-                                       position.coords.longitude);
-
-      var infowindow = new google.maps.InfoWindow({
-        map: map,
-        position: pos,
-        content: 'Aqui estoy wey'
-      });
-
-      map.setCenter(pos);
-    }, function() {
-      handleNoGeolocation(true);
-    });
-  } else {
-    // Browser doesn't support Geolocation
-    handleNoGeolocation(false);
+    zoom: 17,
+    center: merida
   }
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  directionsDisplay.setMap(map);
 }
+
 function calcRoute() {
+  var start = new google.maps.LatLng(20.9807788,-89.6217701);
+  var end = new google.maps.LatLng(20.9807788,-89.6217701);
+    
 
-  // First, remove any existing markers from the map.
-  for (var i = 0; i < markerArray.length; i++) {
-    markerArray[i].setMap(null);
-  }
-
-  // Now, clear the array itself.
-  markerArray = [];
-
-  // Retrieve the start and end locations and create
-  // a DirectionsRequest using WALKING directions.
-  var start = new google.maps.LatLng(position.coords.latitude,
-                                       position.coords.longitude); ;
-  var end = document.getElementById('end').value;
   var request = {
       origin: start,
       destination: end,
-      travelMode: google.maps.TravelMode.WALKING
+      waypoints: waypts,
+      optimizeWaypoints: true,
+      travelMode: google.maps.TravelMode.DRIVING
   };
-function handleNoGeolocation(errorFlag) {
-  if (errorFlag) {
-    var content = 'Error: The Geolocation service failed.';
-  } else {
-    var content = 'Error: Your browser doesn\'t support geolocation.';
-  }
-
-  var options = {
-    map: map,
-    position: new google.maps.LatLng(60, 105),
-    content: content
-  };
-
-  var infowindow = new google.maps.InfoWindow(options);
-  map.setCenter(options.position);
+  directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(response);
+      var route = response.routes[0];
+      var summaryPanel = document.getElementById('panel_ruta');
+      summaryPanel.innerHTML = '';
+      // For each route, display summary information.
+      for (var i = 0; i < route.legs.length; i++) {
+        var routeSegment = i + 1;
+        summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment + '</b><br>';
+        summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
+        summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
+        summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
+      }
+    }
+  });
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', initialize);*/
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+var map;
+ var pos;
+var pos1;
+var haight = new google.maps.LatLng(20.9807788,-89.6217701);
+var oceanBeach = new google.maps.LatLng(21.011757,-89.623417);
 
-    
+function initialize() {
+  
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  var mapOptions = {
+    zoom: 14,
+    center: haight
+  }
+  
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  directionsDisplay.setMap(map);
+geo();
+calcRoute();
+}
+
+function geo(){
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+      var lat = position.coords.latitude;
+    var lng = position.coords.longitude;
+    var pos1 = new google.maps.LatLng(lat, lng);
+  
+    console.log(pos1);
+    console.log(oceanBeach);
+});
+}
+
+}
+function calcRoute() {
+ 
+
+    console.log(oceanBeach);
+  var request = {
+
+      origin: haight,
+      destination: oceanBeach,
+      // Note that Javascript allows us to access the constant
+      // using square brackets and a string value as its
+      // "property."
+      travelMode: google.maps.TravelMode.DRIVING
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(response);
+      directionsDisplay.setMap(map);
+        directionsDisplay.setPanel($("#panel_ruta").get(0));
+    }
+  });
+
+}
+
+
+google.maps.event.addDomListener(window, 'load', initialize);

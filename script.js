@@ -15,8 +15,8 @@ automatic : true, // automatic
 // control and marker configuration
 showcontrols : true, // show next and prev controls
 centercontrols : true, // center controls verically
-nexttext : 'Sig', // Text for 'next' button (can use HTML)
-prevtext : 'Ant', // Text for 'previous' button (can use HTML)
+nexttext : 'Siguiente', // Text for 'next' button (can use HTML)
+prevtext : 'Anterior', // Text for 'previous' button (can use HTML)
 showmarkers : true, // Show individual slide markers
 centermarkers : true, // Center markers horizontally
  

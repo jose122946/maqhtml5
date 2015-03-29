@@ -6,6 +6,8 @@
 html
 {
   height: 100%;
+  margin:0;
+  padding: 0;
 }
 body
 {
@@ -16,7 +18,7 @@ body
   -ms-background-size:cover;
   -o-background-size:cover;
 
-  margin: 0 auto;
+  margin: 0;
   max-width: 2000px;
   width: 100%;
 }
@@ -28,37 +30,51 @@ form
 }
 #seccion1
 {
-
+margin-top: -100px;
 width: 80%;
 margin: 0 auto;
-background: white;
-
+background: rgba(255,255,255,.5);
+-moz-background: rgba(255,255,255,.5);
+-ms-background: rgba(255,255,255,.5);
+-o-background: rgba(255,255,255,.5);
 }
 #menu
 {
-  z-index: 100000;
   height: 70px;
 background: rgb(183,91,0);
-  top:0;
-  position:fixed;
+  
+  
   width: 100%;
-  -webkit-transition:all .8s;
+ /* -webkit-transition:all .8s;
   -mozilla-transition:all .8s;
   -o-transition:all .8s;
   -ms-transition:all .8s;
+*/
 }
 .menu-op
 {
-opacity:.8;
-
-
+opacity: .6;
 }
-.datos{
+#menu2
+{
+position: fixed;
+  
+z-index: 100000;
+  height: 70px;
+background: rgba(183,91,0,1);
+  top:0;
+  
+  width: 100%;   -webkit-transition:all .8s;   -mozilla-transition:all .8s;
+-o-transition:all .8s;   -ms-transition:all .8s; } 
+
+.datos
+{ 
   display: block;
 
 
 
 }
+
 #slider{
   width: 80%;
 margin:150px auto;
@@ -130,10 +146,25 @@ ul.bjqs-controls.v-centered li a:hover{
 }
 header
 {
+  -webkit-transition:all .9s;
+  -moz-transition:all .9s;
+  -ms-transition:all .9s;
+  -o-transition:all .9s;
+  top:0;
+   left:0; 
+  z-index: 10000;
+  position:fixed;
   margin: 0;
   padding:0;
   width:100%;
 
+}
+.gizle {
+  top: -90px;
+}
+.sabit {
+  top:0;
+  z-index: 9999;
 }
 
 nav ul
@@ -181,7 +212,8 @@ height: 100%;
   background: rgba(48,76,93,.8);
   margin: 0 auto;
   margin-top: 100px;
-  width: 80%;
+  width: auto;
+  
 }
 .row
 {
@@ -202,8 +234,8 @@ width: 100%;
 height: 100%;
 -webkit-filter:grayscale(1);
 -webkit-transition:all .7s;
--mozilla-filter:grayscale(1);
--mozilla-transition:all .7s;
+-moz-filter:grayscale(1);
+-moz-transition:all .7s;
 
 -ms-filter:grayscale(2px);
 -ms-transition:all .7s;
@@ -220,7 +252,7 @@ h1
 .img4:hover
 {
  -webkit-filter:grayscale(0);
- -mozilla-filter:grayscale(0);
+ -moz-filter:grayscale(0);
  -ms-filter:grayscale(0px);
  -o-filter:grayscale(0px);
  width: 130%;
@@ -235,7 +267,7 @@ box-shadow:         3px 3px 14px 0px rgba(50, 50, 50, 1);
   width: 40%;
   height: 80%;
  -webkit-filter:grayscale(0);
-
+-moz-filter:grayscale(0);
 }
 #figlogo
 {
@@ -243,23 +275,38 @@ box-shadow:         3px 3px 14px 0px rgba(50, 50, 50, 1);
   height: 100%;
   float: left;
 }
-#map
+#regresar,#llegar
 {
--webkit-filter:grayscale(0);
-width: 50%; 
-height: 60%;
-margin:0 auto;
-margin-top:100px; 
-display:inline-block;
+color: black;
+}
+.llegar2
+{  color: white;
+  text-align: center; 
+  margin: 0 auto;
+  width: 30%;
+  background: rgb(183,91,0);
+  -webkit-box-shadow: 2px 2px 11px 0px rgba(50, 50, 50, 1);
+  -moz-box-shadow:    2px 2px 11px 0px rgba(50, 50, 50, 1);
+box-shadow:         2px 2px 11px 0px rgba(50, 50, 50, 1);
+}
+
+#map_canvas
+{
+margin-top:70px;
+width: 100%; 
+height: 35%;  
 }
 .panel_ruta
 {
-  display:inline-block; 
+  display: inline-block;
+  margin: 0 auto;
+  margin-left: 40px;
   overflow: auto; 
   width:30%; 
-  height: 500px; 
+  height: 70%; 
   margin-top:200px; 
    background:white;
+
 }
 #logo
 {
@@ -288,11 +335,12 @@ display:inline-block;
 }
 footer
 {
+  bottom: 0px;
   margin-top: 20px;
   background: #414732;
   height: 100px;
   color: white;
-  bottom: 0px;
+  
 }
 #valores
 {

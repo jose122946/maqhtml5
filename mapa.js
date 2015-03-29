@@ -45,5 +45,4 @@ $("#map").gmap3(
   //Inicia el trazado de ruta
  
 });
-console.log(latLng);
 });

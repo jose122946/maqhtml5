@@ -212,9 +212,23 @@ box-shadow:         3px 3px 14px 0px rgba(50, 50, 50, 1);
   height: 100%;
   float: left;
 }
-#map-canvas
+#map
 {
 -webkit-filter:grayscale(0);
+width: 50%; 
+height: 60%;
+margin:0 auto;
+margin-top:400px; 
+display:inline-block;
+}
+.panel_ruta
+{
+  display:inline-block; 
+  overflow: auto; 
+  width:30%; 
+  height: 500px; 
+  margin-top:200px; 
+   background:white;
 }
 #logo
 {

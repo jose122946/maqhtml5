@@ -1,5 +1,4 @@
 $(function(){
-    var merida = new google.maps.LatLng(20.9807788,-89.6217701);
 var pos;
 $("#map").gmap3(
 {
@@ -14,7 +13,7 @@ $("#map").gmap3(
           getroute:{
    options:{
         origin: pos,
-        destination:"McKinney, Texas, Estados Unidos",
+        destination:"plaza altabrisa, merida",
         travelMode: google.maps.DirectionsTravelMode.DRIVING
     },
     callback: function(results){
@@ -23,8 +22,8 @@ $("#map").gmap3(
       $(this).gmap3({
         map:{
           options:{
-            zoom: 13,  
-            center: [-33.879, 151.235]
+            zoom: 15,  
+            center: "merida"
           }
         },
         directionsrenderer:{
@@ -35,11 +34,7 @@ $("#map").gmap3(
         }
       });
     }
-  },
-
-          marker:{ 
-            latLng:latLng
-          }
+  }
             });
       }
     }

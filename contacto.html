@@ -5,6 +5,7 @@
 	<title>HTML5</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script src="scroll.js"></script>
 	<script src="gmap3.min.js"></script>	 
   <script src="mapa.js"></script>
 	<link rel="stylesheet" href="normalize.css">
@@ -12,10 +13,11 @@
 	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	
+	
 </head>
 <body >
 	<header>
-	<nav>
+	<nav id="menu">
 		<ul>
 		<a href="index.html"><li id="lilogo"><figure id="figlogo"><img src="img/logo.png" id="logo"alt=""></figure></li></a>
 			
@@ -23,19 +25,31 @@
 			<a class="list" href="#"><li>Quienes Somos</li></a>
 			<a class="list" href="vision.html"><li>Valores</li></a>
 			<a class="list" href="galeria.html"><li>Galeria</li></a>
-			<a class="list" href="#"><li>Contáctanos</li></a>
+			<a class="list" href="contacto.html"><li>Contáctanos</li></a>
 		</ul>
 	</nav>
 	</header>
-	<div id="map"></div>
-	 
-		<section>
+	<section id="seccion1">
 			<article>
 				<form action="">
-				
+				<label for="" class="datos">Nombre</label>
+				<input type="text">
+				<label for="" class="datos">Teléfono</label>
+				<input type="text">
+				<label for="" class="datos">Correo Electrónico</label>
+				<input type="text">
+				<label for="" class="datos">Comentarios</label>
+				<textarea name="text" class="datos"id="" cols="30" rows="10"></textarea>
+
 
 				</form>
+				
 			</article>
-		</section>
+		
+			
+	
+	 </section>
+				<article id="map"></article>
+
 	</body>
 	</html>

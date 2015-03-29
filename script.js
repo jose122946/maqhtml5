@@ -28,4 +28,5 @@ hoverpause : true, // pause the slider on hover
 usecaptions : true, // show captions for images using the image title tag
 responsive : true // enable responsive capabilities (beta)
     });
+    
 });

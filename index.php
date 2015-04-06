@@ -4,6 +4,7 @@
 
 	<meta charset="UTF-8">
 	<title>HTML5</title>
+    <meta rel="canonical" href="http://www.carpinteriaprueba.esy.es">
     <meta name="theme-color" content="#c77324" />
     <meta http-equiv="cleartype" content="on">
     <meta name="MobileOptimized" content="320">

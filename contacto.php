@@ -56,9 +56,7 @@
 			
 	
 	 </section>
-	 <aside>
-		<span class="icon-circle-up"></span>
-	</aside>
+	
 <footer>
 		<div>
 			&copy; Derechos Reservados

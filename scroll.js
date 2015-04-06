@@ -27,10 +27,8 @@ $(function(){
         else {$('.yapiskan').addClass('sabit');}				
 
         cubuk_seviye = $(document).scrollTop();	
-     	if(kaydirma_cubugu > 100)
-    	{
-    		$('.icon-circle-up').toggle(100);			
-    	}
+     	
+    	
   	
      });
     	

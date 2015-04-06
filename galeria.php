@@ -3,6 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>HTML5</title>
+	<meta name="theme-color" content="#c77324" />
+	<meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<link rel="stylesheet" href="normalize.css">
 	 
@@ -10,25 +17,16 @@
 	<link rel="stylesheet" href="magnific-popup.css">
 	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style.css">
 	<script src="scroll.js"></script>
 	<script src="lightbox.js"></script>
 	
 	<script src="fotos.js"></script>
 </head>
 <body>
-	<header class="yapiskan">
-	<nav id="menu">
-		<ul>
-		<a href="index.html"><li id="lilogo"><figure id="figlogo"><img src="img/logo.png" id="logo"alt=""></figure></li></a>
-			
-			<a class="list" href="index.html"><li>Inicio</li></a>
-			<a class="list" href="#"><li>Quienes Somos</li></a>
-			<a class="list" href="vision.html"><li>Valores</li></a>
-			<a class="list" href="galeria.html"><li>Galeria</li></a>
-			<a class="list" href="contacto.html"><li>Contáctanos</li></a>
-		</ul>
-	</nav>
-	</header>
+	<?php
+	include("menu.php");
+	?>
 
 	<section id="galeria">
 	<h1>Galeria de Trabajos</h1>

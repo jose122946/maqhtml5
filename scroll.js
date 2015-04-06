@@ -18,7 +18,8 @@ $(function(){
         var kaydirma_cubugu = $(document).scrollTop();
 
         if (kaydirma_cubugu > header_yuksekligi){$('.yapiskan').addClass('gizle');
-    	$('.yapiskan').addClass('menu-op');} 
+    	$('.yapiskan').addClass('menu-op');
+    } 
         else {$('.yapiskan').removeClass('gizle');
         $('.yapiskan').removeClass('menu-op');}
 
@@ -26,8 +27,21 @@ $(function(){
         else {$('.yapiskan').addClass('sabit');}				
 
         cubuk_seviye = $(document).scrollTop();	
-     });
+     	if(kaydirma_cubugu > 100)
+    	{
+    		$('.icon-circle-up').toggle(100);			
+    	}
   	
+     });
+    	
+  	$(".icon-menu").click(function(event) {
+  		/* Act on the event */
+  		$('#menuul').toggle(4);
+  		$('#menuul').toggleClass('responsive');
+  		$('.lista').removeClass('list')
+  		$('.lista').toggleClass('listresponsive');
+  		
+  	});
 });
 
 
